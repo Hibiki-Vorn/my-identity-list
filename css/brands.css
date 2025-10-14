@@ -661,6 +661,8 @@
 .button-tianya {
 	--button-text:#000;
 	--button-background:#fff;
+	--button-border:1px solid #000;
+	
 }
 /*
 * LittleLink Extended Button Styles
