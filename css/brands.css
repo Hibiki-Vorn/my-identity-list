@@ -38,6 +38,20 @@
 	--button-border:1px solid #ffffff;
 }
 
+/* Tor */
+.button-onion {
+	--button-text:#ffffff;
+	--button-background:#1136a2;
+	--button-border:1px solid #800080;
+}
+
+/* i2p */
+.button-i2p {
+	--button-text:#ffffff;
+	--button-background:#1136a2;
+	--button-border:1px solid #FFFF00;
+}
+
 /* Bandcamp */
 .button-bandcamp {
 	--button-text:#ffffff;
