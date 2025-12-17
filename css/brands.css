@@ -1123,3 +1123,10 @@
     --button-background: #000000;
     --button-border: 1px solid #ffffff;
 }
+
+/* TNMSBPGN */
+.button-TNMSBPGN {
+    --button-text: #ffffff;
+    --button-background: red;
+	--button-border:1px solid #800080;
+}
