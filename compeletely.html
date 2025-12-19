@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypted HTML Demo</title>
+    <link rel="icon" type="image/x-icon" href="/images/avatar.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <noscript>
+        <h1>You Must Enable JavaScript</h1>
+    </noscript>
+    
+    <script>
+        let decryptFunc = async () => {
+            window.encryptedContent = await (await fetch("data.txt")).text();
+            const password = prompt("Please enter a password");
+
+            if (password) {
+                try {
+                    const decrypted = CryptoJS.AES.decrypt(encryptedContent, password).toString(CryptoJS.enc.Utf8);
+                    if (!decrypted) {
+                        alert("Invalid Password");
+                    } else {
+                        document.write(decrypted);
+                    }
+                } catch (e) {
+                    console.log(e);
+                    alert("Decrypt failed");
+                }
+            } else {
+                alert("Please enter a password");
+                decryptFunc();
+            }
+        }
+        window.addEventListener("load", decryptFunc);
+    </script>
+
+</body>
+
+</html>
